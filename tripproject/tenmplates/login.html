@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Log In</title>
+  <h1 style="color:white; font-family:verdana;">Account LogIn</h1>
+</head>
+<body style="background-color:#7FFFD4">
+<form action="login" method="post">
+    {% csrf_token %}
+  <input type="text" name="username" placeholder="Enter username"></br></br>
+  <input type="password" name="password" placeholder="Enter password"></br></br>
+  <input type="submit"></br></br>
+
+</form>
+{% for msg in messages %}
+    <h4>{{msg}}</h4>
+    {% endfor %}
+</body>
+</html>
